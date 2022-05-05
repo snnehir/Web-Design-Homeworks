@@ -14,22 +14,21 @@ h3, p{
     color: #442f8c;
     text-align: center;
 }
-a{
+li > a{
+    display: block;
+    padding: 10px 0px;
+    border: 1px solid #452f8c2c;
+    border-radius: 5px;
     text-decoration: none;
     color: #32216b;
 }
 li{
     list-style: none;
-    padding: 10px 0;
     text-align: center;
-    border: 1px solid #452f8c2c;
-    border-radius: 5px;
     margin-bottom: 5px;
 }
-li:nth-child(even){
-    background-color: #452f8ce1;
-}
 li:nth-child(even) > a{
+    background-color: #452f8ce1;
     color: white;
 }
 ul{
@@ -37,4 +36,7 @@ ul{
     padding-bottom: 40px;
     border: 1px solid #00000025;
     border-radius: 10px;
+}
+p > a{
+    color: rgb(234, 115, 155);
 }
