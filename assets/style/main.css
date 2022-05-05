@@ -1,0 +1,40 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 300px;
+    margin: auto;
+}
+img{
+    display: block;
+    width: 150px;
+    margin: auto;
+}
+h3, p{
+    color: #442f8c;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #32216b;
+}
+li{
+    list-style: none;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #452f8c2c;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+li:nth-child(even){
+    background-color: #452f8ce1;
+}
+li:nth-child(even) > a{
+    color: white;
+}
+ul{
+    padding-right: 40px;
+    padding-bottom: 40px;
+    border: 1px solid #00000025;
+    border-radius: 10px;
+}
