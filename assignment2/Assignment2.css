@@ -1,0 +1,20 @@
+/* Sumeyye Nur Nehir 18050111058 */
+label{
+	display:  inline-block;
+	text-align: left;
+	width: 65px;
+}
+
+.number_part{
+	width: 250px;
+	display: inline-block;
+}
+
+/* form take space as much as its exact size, not entire screen width (default:  block) */
+form{
+	display: inline-block;
+}
+/* since form is inline-block, submit button can be located in right side */
+input[type=submit]{
+	float: right;}
+

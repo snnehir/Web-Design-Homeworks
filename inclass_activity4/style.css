@@ -1,0 +1,32 @@
+/* css table display is used for aligning inputs and labels */
+form{
+	display: table;
+}
+.row{
+	display: table-row;
+}
+.main-label{
+	display: table-cell;
+}
+
+input[type=text], input[type=email], input[type=password]{
+	display: inline-block;
+	width: 200px;
+	outline: none;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+input[type=radio], .language-label, input[type=submit], select, textarea{
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 5px;
+}
+input[type=checkbox]{
+	margin-bottom: 20px;
+}
+textarea{
+	vertical-align: text-top;
+	width: 200px;
+}
+
+
