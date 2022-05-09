@@ -1,24 +1,31 @@
 $(document).ready(function() {
-	// preload images 
-	// note-to-self: function is called for all children of image_list
+	// preload images (but it's not used?)
+	// note-to-self: this function is called for all children of image_list
 	$("#image_list a").each(function() {
 		var swappedImage = new Image();
-		// note-to-self: get source of the images from href attribute of the <a>
+		// note-to-self: get source of the images from href attribute of the <a> element
 		swappedImage.src = $(this).attr("href");
 	});
 
-	// TODO: What should happen? Should caption&image fade out or fade in with animation? 
 	// set up event handlers for links    
 	$("#image_list a").click(function(evt) {
-		// this -> clicked link
+		// this -> clicked link <a>
+		// get the url of the clicked image
 		var imageURL = $(this).attr("href");
 
-		// change "src" attribute of image
-		$("#image").attr("src", imageURL).fadeOut(1000).fadeIn(1000);
+		// first fade out the current image
+		$("#image").fadeOut(1000, ()=>{
+			// then set src and display the new image with fade in effect
+			$("#image").attr("src", imageURL).fadeIn(1000)
+		});
 		
-		// get the caption from title attribute of the clicked link
+		// get the caption from "title" attribute of the clicked link
 		var caption = $(this).attr("title")
-		$("#caption").text(caption).fadeOut(1000).fadeIn(1000);
+		// first fade out the current caption
+		$("#caption").fadeOut(1000, ()=>{
+			// then set and display the new caption
+			$("#caption").text(caption).fadeIn(1000)
+		});
 
 		// cancel the default action of the link
 	    evt.preventDefault();
