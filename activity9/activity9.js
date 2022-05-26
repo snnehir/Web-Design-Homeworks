@@ -11,8 +11,8 @@ $(document).ready(function () {
         $.getJSON(link, function (data) {
             $.each(data.speakers, function (i, item) {
                 $("main h1").text(item.title)
-                $("img").attr("src", item.image)
-                $("main h2").text(item.month + " " + item.speaker)
+                $("main img").attr("src", item.image)
+                $("main h2").html(item.month + "<br>" + item.speaker)
                 $("main p").text(item.text)
             });
         })
