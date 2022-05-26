@@ -1,12 +1,12 @@
 $(document).ready(function () {
     $("a").click(function () {
-        // clear
+        // clear elements
         $("main h1").val("")
         $("img").val("")
         $("main h2").val("")
         $("main p").val("")
 
-        link = "json_files/" + $(this).attr("title") + ".json"
+        const link = "json_files/" + $(this).attr("title") + ".json"
 
         $.getJSON(link, function (data) {
             $.each(data.speakers, function (i, item) {
