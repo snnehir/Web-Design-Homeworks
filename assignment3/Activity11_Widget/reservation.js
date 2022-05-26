@@ -1,8 +1,9 @@
 $(document).ready(function() {
+	$( "#tabs" ).tabs();
 	var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
 	
 	// move the focus to the first text box
-	$("#arrival_date").focus();
+	$("#arrival_date").datepicker({ minDate: 0, maxDate: "+90D" }).focus();
 	
 	// the handler for the submit event of the form
 	// executed when the submit button is clicked
@@ -74,4 +75,13 @@ $(document).ready(function() {
 			}
 		} // end function
 	);	// end submit
+	
+	// hide dialog
+	var dialog = $( "#dialog" ).dialog({
+		autoOpen: false,
+	});
+	// open dialog
+	$("#policies").on("click", function(){
+		dialog.dialog("open")
+	})
 }); // end ready
